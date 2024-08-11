@@ -26,7 +26,7 @@ Button {
 
     property int currentIndex
 
-    visible: keyboard.layouts.length > 1
+    visible: true
 
     style: ButtonStyle {
         label: Image {
