@@ -30,7 +30,7 @@ ToolButton {
 
     visible: true
 
-    opacity: root.activeFocus ? 1 : 0.5
+    opacity: root.activeFocus ? 0.9 : 0.6
 
     style: ButtonStyle {
         label: Label {
