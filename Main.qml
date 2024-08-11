@@ -58,55 +58,67 @@ Rectangle {
         RowLayout {
             id: header
 
-            Layout.alignment: Qt.AlignRight
+            // Layout.alignment: Qt.AlignRight
             Layout.fillHeight: false
             Layout.topMargin: generalFontSize
             Layout.rightMargin: generalFontSize * 1.5
 
 
-            SessionMenu {
-                id: sessionMenu
+		    // Align SessionMenu to the left
+		    RowLayout {
+		        Layout.alignment: Qt.AlignLeft
+                SessionMenu {
+                    id: sessionMenu
+	
+                    rootFontSize: root.generalFontSize
+                    rootFontColor: root.generalFontColor
+	            }
+		    }
+		
+		    Spacer { } // hmmm
+		
+		    // Align other elements to the right
+		    RowLayout {
+		        Layout.alignment: Qt.AlignRight
 
-                rootFontSize: root.generalFontSize
-                rootFontColor: root.generalFontColor
-            }
 
-            KeyboardLayoutButton {
+	            KeyboardLayoutButton {
+	
+	                Layout.topMargin: -1
+	
+	                implicitHeight: clockLabel.height * 1.2
+	                implicitWidth: clockLabel.height * 1.8
+	
+	            }
 
-                Layout.topMargin: -1
-
-                implicitHeight: clockLabel.height * 1.2
-                implicitWidth: clockLabel.height * 1.8
-
-            }
-
-            Item {
-                id: clock
-
-                Layout.fillHeight: true
-                Layout.minimumWidth: clockLabel.width
-
-                Label {
-                    id: clockLabel
-                    color: generalFontColor
-                    font.pointSize: root.generalFontSize
-                    renderType: Text.QtRendering
-                    function updateTime() {
-                        text = new Date().toLocaleString(Qt.locale("en_US"), "ddd dd MMMM,  hh:mm A")
-                    }
-                }
-                Timer {
-                    interval: 1000
-                    repeat: true
-                    running: true
-                    onTriggered: {
-                        clockLabel.updateTime()
-                    }
-                }
-                Component.onCompleted: {
-                    clockLabel.updateTime()
-                }
-            }
+	            Item {
+	                id: clock
+	
+	                Layout.fillHeight: true
+	                Layout.minimumWidth: clockLabel.width
+	
+	                Label {
+	                    id: clockLabel
+	                    color: generalFontColor
+	                    font.pointSize: root.generalFontSize
+	                    renderType: Text.QtRendering
+	                    function updateTime() {
+	                        text = new Date().toLocaleString(Qt.locale("en_US"), "ddd dd MMMM,  hh:mm A")
+	                    }
+	                }
+	                Timer {
+	                    interval: 1000
+	                    repeat: true
+	                    running: true
+	                    onTriggered: {
+	                        clockLabel.updateTime()
+	                    }
+	                }
+	                Component.onCompleted: {
+	                    clockLabel.updateTime()
+	                }
+	            }
+		    }
         }
 
 
