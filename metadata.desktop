@@ -12,5 +12,5 @@ Screenshot=preview.jpg
 MainScript=Main.qml
 ConfigFile=theme.conf
 TranslationsDirectory=translations
-Theme-Id=chili
+Theme-Id=snow
 Theme-API=2.0
