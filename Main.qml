@@ -63,6 +63,14 @@ Rectangle {
             Layout.topMargin: generalFontSize
             Layout.rightMargin: generalFontSize * 1.5
 
+
+            SessionMenu {
+                id: sessionMenu
+
+                rootFontSize: root.generalFontSize
+                rootFontColor: root.generalFontColor
+            }
+
             KeyboardLayoutButton {
 
                 Layout.topMargin: -1
@@ -284,21 +292,21 @@ Rectangle {
             ]
         }
 
-        RowLayout {
-            id: footer
+//        RowLayout {
+//            id: footer
 
-            Layout.fillHeight: false
-            Layout.alignment: Qt.AlignBottom
-            Layout.bottomMargin: generalFontSize
-            Layout.leftMargin: generalFontSize * 1.5
+//            Layout.fillHeight: false
+//            Layout.alignment: Qt.AlignBottom
+//            Layout.bottomMargin: generalFontSize
+//            Layout.leftMargin: generalFontSize * 1.5
 
-            SessionMenu {
-                id: sessionMenu
+//            SessionMenu {
+//                id: sessionMenu
 
-                rootFontSize: root.generalFontSize
-                rootFontColor: root.generalFontColor
-            }
-        }
+//                rootFontSize: root.generalFontSize
+//                rootFontColor: root.generalFontColor
+//            }
+//        }
 
         Connections {
             target: sddm
