@@ -65,16 +65,19 @@ Rectangle {
 
 
 		    // Align SessionMenu to da left
-		    RowLayout {
-				Layout.alignment: Qt.AlignLeft
-				SessionMenu {
-			   		id: sessionMenu
+            RowLayout {
+                Layout.alignment: Qt.AlignLeft
+                SessionMenu {
+                    id: sessionMenu
 
-				    rootFontSize: root.generalFontSize
-				    rootFontColor: root.generalFontColor
-			    }
-		    }
+                    rootFontSize: root.generalFontSize
+                    rootFontColor: root.generalFontColor
+                }
+            }
 
+            Item {
+                Layout.fillWidth: true
+            }
 		
 		    // Align da rest to da right :3
 		    RowLayout {
