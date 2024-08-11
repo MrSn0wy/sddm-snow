@@ -1,13 +1,13 @@
 [SddmGreeterTheme]
-Name=Chili
-Description=The hottest theme for SDDM
-Author=Marian Alexander Arlt
-Copyright=(c) 2018, Marian Alexander Arlt
-Email=marianarlt@icloud.com
+Name=snow
+Description=A silly theme for SDDM
+Author=Mr. Snowy
+Copyright=(c) 2024, Mr. Snowy
+Email=
 License=GPLv3
 Type=sddm-theme
 Version=0.1.5
-Website=https://github.com/MarianArlt/sddm-theme-chili
+Website=https://github.com/MrSn0wy/sddm-snow/
 Screenshot=preview.jpg
 MainScript=Main.qml
 ConfigFile=theme.conf
