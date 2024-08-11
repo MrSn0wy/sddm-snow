@@ -75,53 +75,56 @@ Rectangle {
                 }
             }
 
+			// spacer
             Item {
                 Layout.fillWidth: true
             }
 		
-		    // Align da rest to da right :3
-		    RowLayout {
-		        Layout.alignment: Qt.AlignRight
+			// Align da rest to da right :3
+			RowLayout {
+				Layout.alignment: Qt.AlignRight
 
 
-	            KeyboardLayoutButton {
+				 KeyboardLayoutButton {
+					Layout.topMargin: -1
 	
-	                Layout.topMargin: -1
-	
-	                implicitHeight: clockLabel.height * 1.2
-	                implicitWidth: clockLabel.height * 1.8
-	
-	            }
+					implicitHeight: clockLabel.height * 1.2
+					implicitWidth: clockLabel.height * 1.8
+				}
 
-	            Item {
-	                id: clock
+				Item {
+					id: clock
+
+					Layout.fillHeight: true
+					Layout.minimumWidth: clockLabel.width
 	
-	                Layout.fillHeight: true
-	                Layout.minimumWidth: clockLabel.width
-	
-	                Label {
-	                    id: clockLabel
-	                    color: generalFontColor
-	                    font.pointSize: root.generalFontSize
-	                    renderType: Text.QtRendering
-	                    function updateTime() {
-	                        text = new Date().toLocaleString(Qt.locale("en_US"), "ddd dd MMMM,  hh:mm A")
-	                    }
-	                }
-	                Timer {
-	                    interval: 1000
-	                    repeat: true
-	                    running: true
-	                    onTriggered: {
-	                        clockLabel.updateTime()
-	                    }
-	                }
-	                Component.onCompleted: {
-	                    clockLabel.updateTime()
-	                }
-	            }
-		    }
-        }
+					Label {
+						id: clockLabel
+						color: generalFontColor
+						font.pointSize: root.generalFontSize
+						renderType: Text.QtRendering
+
+						function updateTime() {
+							text = new Date().toLocaleString(Qt.locale("en_US"), "ddd dd MMMM,  hh:mm A")
+						}
+					}
+
+					Timer {
+						interval: 1000
+						repeat: true
+						running: true
+
+						onTriggered: {
+							clockLabel.updateTime()
+						}
+					}
+
+					Component.onCompleted: {
+						clockLabel.updateTime()
+					}
+				}
+			}
+		}
 
 
         StackView {
