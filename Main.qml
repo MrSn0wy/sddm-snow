@@ -62,6 +62,7 @@ Rectangle {
             Layout.fillHeight: false
             Layout.topMargin: generalFontSize
             Layout.rightMargin: generalFontSize * 1.5
+            Layout.leftMargin: generalFontSize * 1.5
 
 
             // Align SessionMenu to da left
