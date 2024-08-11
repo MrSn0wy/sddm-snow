@@ -28,7 +28,7 @@ ToolButton {
     property int rootFontSize
     property string rootFontColor
 
-    visible: menu.items.length > 1
+    visible: true
 
     opacity: root.activeFocus ? 1 : 0.5
 
