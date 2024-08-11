@@ -64,20 +64,19 @@ Rectangle {
             Layout.rightMargin: generalFontSize * 1.5
 
 
-		    // Align SessionMenu to the left
+		    // Align SessionMenu to da left
 		    RowLayout {
-		        Layout.alignment: Qt.AlignLeft
-                SessionMenu {
-                    id: sessionMenu
-	
-                    rootFontSize: root.generalFontSize
-                    rootFontColor: root.generalFontColor
-	            }
+				Layout.alignment: Qt.AlignLeft
+				SessionMenu {
+			   		id: sessionMenu
+
+				    rootFontSize: root.generalFontSize
+				    rootFontColor: root.generalFontColor
+			    }
 		    }
+
 		
-		    Spacer { } // hmmm
-		
-		    // Align other elements to the right
+		    // Align da rest to da right :3
 		    RowLayout {
 		        Layout.alignment: Qt.AlignRight
 
